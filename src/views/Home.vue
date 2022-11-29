@@ -4,7 +4,7 @@
       <v-app-bar app color="#f47758" dark>
         <!-- <v-app-bar-nav-icon @click.stop="mini = !mini" /> -->
         <v-toolbar-title class="ml-0pl-4">
-          <span class="hidden-sm-and-down">My Todo List</span>
+          <span class="hidden-sm-and-down">My Todo List </span>
         </v-toolbar-title>
         <v-spacer />
         <!-- <v-btn icon>
