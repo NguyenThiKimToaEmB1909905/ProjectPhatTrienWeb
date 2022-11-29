@@ -1,7 +1,7 @@
 <template>
   <div class="todo-container">
     <v-app id="inspire">
-      <v-app-bar app color="#CC9B6D" dark>
+      <v-app-bar app color="#f47758" dark>
         <!-- <v-app-bar-nav-icon @click.stop="mini = !mini" /> -->
         <v-toolbar-title class="ml-0pl-4">
           <span class="hidden-sm-and-down">My Todo List</span>
@@ -25,7 +25,7 @@
                   <v-spacer></v-spacer>
                   <v-dialog v-model="dialog" persistent max-width="800px">
                     <template v-slot:activator="{ on }">
-                      <v-btn color="red" v-on="on" outlined="">
+                      <v-btn  color="white" v-on="on" outlined="">
                         <v-icon left>add</v-icon> Thêm
                       </v-btn>
                     </template>
@@ -80,14 +80,14 @@
                         <v-btn color="success" class="mx-2" fab x-small @click="editPost(item)" outlined>
                           <v-icon small>mdi-pencil</v-icon>
                         </v-btn>
-                        <v-btn color="#FF7878" fab x-small @click="deletePost(item._id)" outlined>
+                        <v-btn color="red" fab x-small @click="deletePost(item._id)" outlined>
                           <v-icon small>mdi-delete</v-icon>
                         </v-btn>
                       </template>
 
                       <!-- kết quả tìm kiếm -->
                       <template v-slot:no-results>
-                        <v-alert :value="true" color="#FF7878" icon="warning" dark>
+                        <v-alert :value="true" color="#e1502c" icon="warning" dark>
                           Không tìm được công việc {{ search }} trong danh sách.
                         </v-alert>
                       </template>
@@ -110,7 +110,7 @@
         </v-container>
       </v-main>
       <!-- thanh trở về đầu trang -->
-      <v-btn v-scroll="onScroll" bottom color="red" dark fab fixed right @click="toTop">
+      <v-btn v-scroll="onScroll" bottom color="#e1502c" dark fab fixed right @click="toTop">
         <v-icon>mdi-chevron-up</v-icon>
       </v-btn>
     </v-app>
@@ -310,7 +310,7 @@ export default {
 }
 
 #thanhdscv {
-  background-color: #e3caa5;
+  background-color: #ed7e63;
 }
 
 #mx-autoelevation-19 {
@@ -333,5 +333,7 @@ export default {
 
 .search {
   font-family: "Space Mono", monospace;
+  /* background: #e1502c; */
+  
 }
 </style>
